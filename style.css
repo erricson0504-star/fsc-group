@@ -1,0 +1,430 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Nav */
+header {
+    background: #fff;
+    border-bottom: 2px solid #f1f1f1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo img {
+    height: 150px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #002d5b; /* Navy Blue */
+    font-weight: 600;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #c9a227; /* Gold Accent */
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: url('img/469753973_122134058384388713_5932749993555426560_n.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    background: rgba(0, 45, 91, 0.5); /* Dark Navy Overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding-left: 10%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #ffcc00;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #002d5b;
+    color: #ffffff;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 2px solid #002d5b; /* Added border to match heights perfectly */
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #002d5b;
+    border-color: #002d5b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(201, 162, 39, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #002d5b;
+    color: #002d5b;
+    padding: 12px 30px; /* Matched padding with primary */
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #002d5b;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 45, 91, 0.15);
+}
+
+/* About Section */
+.about {
+    font-family: 'Kantumruy Pro', 'Segoe UI', sans-serif;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-family: 'Kantumruy Pro', 'Segoe UI', sans-serif;
+    color: #002d5b;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Grid */
+.portfolio {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.portfolio h3 {
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    color: #002d5b;
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.company-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+.company-card img {
+    width: 100%;      /* Makes the logo fill the width of the card */
+    max-width: 150px; /* Limits the logo so it doesn't get too giant */
+    height: auto;     /* Keeps the logo's proportions correct */
+    object-fit: contain; /* Ensures the logo isn't stretched or cropped */
+}
+.company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+/* NEWS SECTION CONTAINER */
+.news-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.news-header h2 {
+    font-size: 2rem;
+    color: #002d5b;
+    font-weight: 700;
+}
+
+/* YELLOW PILL BUTTON */
+.view-more-btn {
+    background-color: #002d5b; /* Corporate Gold */
+    color: #ffffff;
+    padding: 12px 28px; /* Slightly deeper padding for a premium look */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex; /* Changed to inline-flex so the button doesn't stretch full-width */
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #002d5b;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 12px rgba(201, 162, 39, 0.15);
+}
+
+.view-more-btn:hover {
+    background-color: #002d5b; /* Darker gold for depth */
+    border-color: #002d5b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.3);
+    gap: 12px; /* Smoothly pushes the arrow icon out on hover */
+}
+
+/* GRID SETUP */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* INDIVIDUAL CARD */
+.news-card {
+    background: #fff;
+    transition: 0.3s;
+}
+
+.news-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.news-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* GOLD CORNER FOLD EFFECT */
+.corner-ribbon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, transparent 50%, #c9a227 50%);
+    z-index: 10;
+}
+
+.corner-ribbon::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 45px 45px;
+    border-color: transparent transparent rgba(0,0,0,0.2) transparent;
+}
+
+/* NEWS TEXT & META */
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #002d5b;
+}
+
+.news-meta i {
+    color: #3b5998; /* Facebook blue */
+    font-size: 14px;
+}
+
+.news-date {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.news-text {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    /* Limit to 3 lines with ellipsis */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.news-image-wrapper:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(3, 154, 255, 0.1);
+    transition: 0.3s;
+}
+/* Apply Khmer Font specifically to the News Section */
+.news-section, 
+.news-header h2, 
+.news-excerpt {
+    font-family: 'Kantumruy Pro', 'Segoe UI', sans-serif;
+}
+
+/* Adjusting the Title for Khmer script */
+.news-header h2 {
+    font-size: 1.8rem; /* Khmer fonts often look larger, so we slightly reduce the size */
+    line-height: 1.5;
+}
+
+/* Adjusting the News Text */
+.news-excerpt {
+    font-size: 15px;
+    line-height: 1.8; /* Khmer script needs more vertical space between lines */
+    color: #444;
+}
+
+/* Adjust the Date font to keep numbers clean */
+.news-date {
+    font-family: 'Segoe UI', Tahoma, sans-serif; /* Keep English font for dates/numbers */
+}
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+/* --- FOOTER SECTION --- */
+.footer {
+    background: #002d5b; /* Navy Blue */
+    color: #ffffff;
+    padding: 60px 0 30px; /* Top padding for space, bottom for copyright */
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* TOP MENU LINKS */
+.footer-top {
+    margin-bottom: 30px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+    color: #ffde38; /* Gold on hover */
+}
+
+/* HORIZONTAL DIVIDER LINE */
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white line */
+    margin-bottom: 30px;
+}
+
+/* BOTTOM AREA (Copyright & Socials) */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); /* Slightly dimmed copyright text */
+}
+
+/* SOCIAL MEDIA ICONS */
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-social a:hover {
+    color: #ffde38; /* Gold on hover */
+    transform: translateY(-3px); /* Slight bounce effect */
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse; /* Put icons on top of text on mobile */
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-top {
+        display: flex;
+        justify-content: center;
+    }
+}
